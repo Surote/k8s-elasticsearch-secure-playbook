@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: elasticsearch-cert-ca
+spec:
+  duration: 24h # 90d 2160h
+  renewBefore: 3h # 7d 168h
+  commonName: elasticsearch
+  secretName: elasticsearch-ca
+  issuerRef:
+    name: ca-issuer
+

@@ -70,7 +70,7 @@ envFrom: []
 # the X-Pack license
 secretMounts:
   - name: elastic-certificates
-    secretName: selfsigned-cert-tls
+    secretName: elasticsearch-ca
     path: /usr/share/elasticsearch/config/certs
 #  - name: elastic-certificates
 #    secretName: elastic-certificates

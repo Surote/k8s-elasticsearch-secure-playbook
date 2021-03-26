@@ -44,6 +44,6 @@ protocol: https
 
 secretMounts:
   - name: elastic-certificate
-    secretName: selfsigned-cert-tls
+    secretName: elasticsearch-ca
     path: /usr/share/kibana/config/certs
 
