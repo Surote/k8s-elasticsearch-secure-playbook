@@ -1,0 +1,5 @@
+architecture: "replicaset"
+replicaCount: 2
+persistence:
+  storageClass: "nfs-storageclass"
+

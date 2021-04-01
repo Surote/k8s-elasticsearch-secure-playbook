@@ -55,7 +55,7 @@ clusterDomain: cluster.local
 
 ## MongoDB(R) architecture. Allowed values: standalone or replicaset
 ##
-architecture: standalone
+architecture: replicaset
 
 ## Use StatefulSet instead of Deployment when deploying standalone
 ##
@@ -71,7 +71,7 @@ auth:
   ## MongoDB(R) root password
   ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#setting-the-root-password-on-first-run
   ##
-  rootPassword: ""
+  rootPassword: "Datacraft!"
   ## MongoDB(R) custom user and database
   ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#creating-a-user-and-database-on-first-run
   ##
@@ -456,11 +456,12 @@ persistence:
   ## If undefined (the default) or set to null, no storageClassName spec is
   ## set, choosing the default provisioner.
   ##
+  # storageClass: "-"
   storageClass: "nfs-storageclass"
   ## PV Access Mode
   ##
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   ## PVC size
   ##
   size: 20Gi
